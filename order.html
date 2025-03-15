@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order - Harriet Boone Artisan Works</title>
+    <style>
+      /* General Page Styling */
+      body {
+        background-color: #F3F4F6; /* Soft light grey background */
+        color: #4B0082; /* Dark purple text */
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1, h2, h3 {
+        color: #00008B; /* Darkish blue for headings */
+        text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #FF69B4; /* Pink edges */
+        font-family: 'Playfair Display', serif;
+      }
+      
+      /* Navigation Styling */
+      nav {
+        background-color: #B39DDB; /* Pastel purple */
+        padding: 10px 0;
+      }
+      
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      
+      nav ul li {
+        margin: 0 15px;
+      }
+      
+      nav ul li a {
+        text-decoration: none;
+        color: #00008B;
+        font-weight: bold;
+      }
+      
+      nav ul li a:hover {
+        color: #FF69B4;
+      }
+      
+      /* Container for Page Content */
+      .container {
+        max-width: 1200px;
+        margin: 80px auto 100px; /* Extra top margin to account for fixed nav */
+        padding: 20px;
+      }
+      
+      /* Order Form Styling */
+      form {
+        margin: 20px 0;
+      }
+      
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      
+      input, select, textarea {
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 400px;
+      }
+      
+      button {
+        padding: 10px 20px;
+        background-color: #00008B;
+        color: #FF69B4;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      
+      button:hover {
+        background-color: #FF69B4;
+        color: #00008B;
+      }
+      
+      /* Order Summary Styling */
+      .order-summary {
+        border: 1px solid #ddd;
+        padding: 15px;
+        background-color: #fff;
+        margin-top: 20px;
+        max-width: 400px;
+      }
+      
+      /* Footer Styling */
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #B39DDB;
+        color: #00008B;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="order.html" class="active">Order</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <section id="order">
+          <h1>Place Your Order</h1>
+          <p>Please fill out the form below to place your order or request custom designs.</p>
+          <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+            
+            <label for="product">Product:</label>
+            <select id="product" name="product">
+              <option value="earrings">Wooden Earrings</option>
+              <option value="brooch">Wooden Brooch</option>
+              <option value="bracelet">Wooden Bracelet</option>
+            </select>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            
+            <label for="comments">Additional Instructions:</label>
+            <textarea id="comments" name="comments" rows="3"></textarea>
+            
+            <button type="submit">Submit Order</button>
+            <button type="reset">Reset Form</button>
+          </form>
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p id="summary-text">Your order details will appear here as you fill out the form.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
+    </footer>
+    <script>
+      // Dynamic Order Summary Update
+      const orderForm = document.getElementById('order-form');
+      const summaryText = document.getElementById('summary-text');
+      
+      orderForm.addEventListener('input', function() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const product = document.getElementById('product').value;
+        const quantity = document.getElementById('quantity').value;
+        const comments = document.getElementById('comments').value;
+        
+        summaryText.innerHTML = `
+          <strong>Name:</strong> ${name} <br>
+          <strong>Email:</strong> ${email} <br>
+          <strong>Phone:</strong> ${phone} <br>
+          <strong>Address:</strong> ${address} <br>
+          <strong>Product:</strong> ${product} <br>
+          <strong>Quantity:</strong> ${quantity} <br>
+          <strong>Comments:</strong> ${comments}
+        `;
+      });
+    </script>
+  </body>
+</html>
