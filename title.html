@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"?
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" contents="width = device-width, initial-scale = 1.0"/>
+        <title>Harriet Boone Artisan Works - Home</title>
+        <style>
+            body {
+                background-color: #F3F4F6;
+                color: #4b0082;
+                font-family: 'openSans', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+        h1, h2, h3 {
+            color: #00008b
+            text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #ff69B4;
+            font-family: 'Playfair Display', serif;
+                    }
+        nav {
+            background-color: #b39ddb
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #00008B;
+            font-weight: bold;
+            }
+        nav ul li a:hover {
+            color: #FF69B4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .slider {
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            heaight: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background color: #b39ddb;
+            color: #00008B;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="products.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <main>
+                <section id="home">
+                    <h1>Welcome to Harriet Boone Artisan Works</h1>
+                    <p>Discover unique, handcrafted wooden wearables that blend traditional craftsmanship with Contemporary Design.</p>
+                    <div class="slider">
+                        <img src="images/flowerear.jpg" alt="floral earwear">
+                    </div>
+                </section>
+            </main>
+            </div>
+            <footer>
+                <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved</p>
+                </footer>
+                <scipt>
+                    let currentSlides = 0;
+                    const slides = document.querySelectorAll('.slider img');
+                    function showslide(index) {
+                    Slides.forEach((slide, i) => {
+                    slide.classList.toggle('active')i=== index);
+                    });
+                }
+                function nextSlide(){
+                    currentSlide = (currentSlide);
+                    showSlide(currentSlide)
+                    }if (slides.length>0){
+                        setinterval(next slide, 3000);
+                }
+                </scipt>
+    </body>
+    </html>
