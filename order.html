@@ -3,22 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order - Harriet Boone Artisan Works</title>
+    <title>Harriet Boone Artisan Works - Home</title>
     <style>
+      /* Use Dancing Script for h1 and set a larger size */
+      h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 3em; /* Increase size as needed */
+      }
+      
+      /* Use Playfair Display for h2 and h3 with a different size */
+      h2, h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em; /* Adjust as needed */
+      }
+      
+      /* Other styles */
       body {
+        font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
         color: #4B0082;
-        font-family: 'Open Sans', sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      h1, h2, h3 {
-        color: #00008B;
-        text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #FF69B4;
-        font-family: 'Playfair Display', serif;
       }
       nav {
-        background-color: #B39DDB;
+        background-color: #B39DDB; /* Pastel purple */
         padding: 10px 0;
       }
       nav ul {
@@ -41,41 +47,25 @@
       }
       .container {
         max-width: 1200px;
-        margin: 80px auto 100px;
+        margin: 0 auto;
         padding: 20px;
       }
-      form {
-        margin: 20px 0;
+      .slider {
+        position: relative;
+        overflow: hidden;
+        max-width: 800px;
+        margin: 20px auto;
       }
-      label {
-        display: block;
-        margin-top: 10px;
-      }
-      input, select, textarea {
-        padding: 8px;
-        margin-top: 5px;
-        margin-bottom: 10px;
+      .slider img {
         width: 100%;
-        max-width: 400px;
+        display: none;
       }
-      button {
-        padding: 10px 20px;
-        background-color: #00008B;
-        color: #FF69B4;
-        border: none;
-        cursor: pointer;
-        margin-right: 10px;
+      .slider img.active {
+        display: block;
       }
-      button:hover {
-        background-color: #FF69B4;
-        color: #00008B;
-      }
-      .order-summary {
-        border: 1px solid #ddd;
-        padding: 15px;
-        background-color: #fff;
-        margin-top: 20px;
-        max-width: 400px;
+      img {
+        max-width: 100%;
+        height: auto;
       }
       footer {
         text-align: center;
@@ -84,13 +74,6 @@
         color: #00008B;
         position: fixed;
         bottom: 0;
-        width: 100%;
-      }
-      /* Style for the order page image */
-      .order-img {
-        display: block;
-        margin: 20px auto;
-        max-width: 500px;
         width: 100%;
       }
     </style>
