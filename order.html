@@ -5,27 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order - Harriet Boone Artisan Works</title>
     <style>
-      /* General Page Styling */
       body {
-        background-color: #F3F4F6; /* Soft light grey background */
-        color: #4B0082; /* Dark purple text */
+        background-color: #F3F4F6;
+        color: #4B0082;
         font-family: 'Open Sans', sans-serif;
         margin: 0;
         padding: 0;
       }
-      
       h1, h2, h3 {
-        color: #00008B; /* Darkish blue for headings */
-        text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #FF69B4; /* Pink edges */
+        color: #00008B;
+        text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #FF69B4;
         font-family: 'Playfair Display', serif;
       }
-      
-      /* Navigation Styling */
       nav {
-        background-color: #B39DDB; /* Pastel purple */
+        background-color: #B39DDB;
         padding: 10px 0;
       }
-      
       nav ul {
         list-style: none;
         display: flex;
@@ -33,38 +28,29 @@
         margin: 0;
         padding: 0;
       }
-      
       nav ul li {
         margin: 0 15px;
       }
-      
       nav ul li a {
         text-decoration: none;
         color: #00008B;
         font-weight: bold;
       }
-      
       nav ul li a:hover {
         color: #FF69B4;
       }
-      
-      /* Container for Page Content */
       .container {
         max-width: 1200px;
-        margin: 80px auto 100px; /* Extra top margin to account for fixed nav */
+        margin: 80px auto 100px;
         padding: 20px;
       }
-      
-      /* Order Form Styling */
       form {
         margin: 20px 0;
       }
-      
       label {
         display: block;
         margin-top: 10px;
       }
-      
       input, select, textarea {
         padding: 8px;
         margin-top: 5px;
@@ -72,7 +58,6 @@
         width: 100%;
         max-width: 400px;
       }
-      
       button {
         padding: 10px 20px;
         background-color: #00008B;
@@ -81,13 +66,10 @@
         cursor: pointer;
         margin-right: 10px;
       }
-      
       button:hover {
         background-color: #FF69B4;
         color: #00008B;
       }
-      
-      /* Order Summary Styling */
       .order-summary {
         border: 1px solid #ddd;
         padding: 15px;
@@ -95,8 +77,6 @@
         margin-top: 20px;
         max-width: 400px;
       }
-      
-      /* Footer Styling */
       footer {
         text-align: center;
         padding: 10px;
@@ -104,6 +84,13 @@
         color: #00008B;
         position: fixed;
         bottom: 0;
+        width: 100%;
+      }
+      /* Style for the order page image */
+      .order-img {
+        display: block;
+        margin: 20px auto;
+        max-width: 500px;
         width: 100%;
       }
     </style>
@@ -124,6 +111,8 @@
       <main>
         <section id="order">
           <h1>Place Your Order</h1>
+          <!-- Order page image added -->
+          <img class="order-img" src="https://source.unsplash.com/500x300/?wood,jewelry" alt="Woodworking Jewelry Process">
           <p>Please fill out the form below to place your order or request custom designs.</p>
           <form id="order-form">
             <label for="name">Name:</label>
