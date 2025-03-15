@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Harriet Boone Artisan Works</title>
+    <style>
+      /* Internal CSS for Products Page */
+      body {
+        background-color: #F3F4F6;
+        color: #4B0082;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2, h3 {
+        color: #00008B;
+        text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #FF69B4;
+        font-family: 'Playfair Display', serif;
+      }
+      nav {
+        background-color: #B39DDB;
+        padding: 10px 0;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #00008B;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        color: #FF69B4;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .product-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #B39DDB;
+        color: #00008B;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <section id="products">
+          <h1>Our Products</h1>
+          <div class="product-gallery">
+            <div class="product">
+              <img src="Images/earwings.jpg" alt="Wooden Earrings">
+              <h3>Wooden Earrings</h3>
+              <p>Elegant, handcrafted earrings made from high-quality wood.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/fireneck.jpg" alt="Wooden Neckpiece">
+              <h3>Wooden Neckpiece</h3>
+              <p>A beautifully crafted neckpiece that combines tradition and modern design.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/flowerear.jpg" alt="Floral Earwear">
+              <h3>Floral Earwear</h3>
+              <p>Intricate earwear inspired by nature's blossoms.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/jarrahwedpair.jpg" alt="Jarrah Wedding Pair">
+              <h3>Jarrah Wedding Pair</h3>
+              <p>Stunning wooden pair pieces perfect for wedding accessories.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/jewelrybox.jpg" alt="Wooden Jewelry Box">
+              <h3>Wooden Jewelry Box</h3>
+              <p>An elegant box to store your precious items.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/moonbox.jpg" alt="Moon Box">
+              <h3>Moon Box</h3>
+              <p>A decorative wooden box with a lunar design.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/neckshapes.jpg" alt="Neck Shapes">
+              <h3>Neck Shapes</h3>
+              <p>Modern designs that complement any attire.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/necktreeoflife.jpg" alt="Tree of Life Necklace">
+              <h3>Tree of Life Necklace</h3>
+              <p>An intricate piece representing growth and unity.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/ringcarved.jpg" alt="Carved Ring">
+              <h3>Carved Ring</h3>
+              <p>A beautifully carved ring that makes a bold statement.</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="Images/woodboxsml2.jpg" alt="Wooden Box">
+              <h3>Wooden Box</h3>
+              <p>A small, decorative wooden box ideal for trinkets.</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
