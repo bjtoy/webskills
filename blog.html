@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Harriet Boone Artisan Works</title>
+    <style>
+      /* Internal CSS for Blog Page */
+      body {
+        background-color: #F3F4F6;
+        color: #4B0082;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2, h3 {
+        color: #00008B;
+        text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #FF69B4;
+        font-family: 'Playfair Display', serif;
+      }
+      nav {
+        background-color: #B39DDB;
+        padding: 10px 0;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #00008B;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        color: #FF69B4;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      article {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+      }
+      article img {
+        max-width: 100%;
+        height: auto;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #B39DDB;
+        color: #00008B;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <section id="blog">
+          <h1>Artisan Insights</h1>
+          <article>
+            <h2>Crafting with Passion</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin, ipsum a tincidunt fermentum, arcu orci sollicitudin lectus, in porta urna neque ut ex. Nulla facilisi.</p>
+            <img src="Images/ringcarved.jpg" alt="Carved Ring">
+          </article>
+          <article>
+            <h2>The Art of Woodworking</h2>
+            <p>Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet magna vel felis cursus tincidunt non non sapien.</p>
+            <img src="Images/woodboxsml2.jpg" alt="Wooden Box">
+          </article>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
