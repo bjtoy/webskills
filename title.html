@@ -16,14 +16,14 @@
       
       /* ========== Global Styles ========== */
       body {
-        font-family: 'Open Sans', sans-serif; /* Revert to original font for body text */
+        font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
         color: #4B0082; /* Dark purple for page text */
         margin: 0;
         padding: 0;
       }
       h1 {
-        font-family: 'Rouge Script', cursive; /* Use Rouge Script for h1 headings */
+        font-family: 'Rouge Script', cursive;
         font-size: 3.5em;  /* Slightly larger heading */
       }
       h2, h3 {
@@ -91,9 +91,19 @@
         flex: 1;
         text-align: right;
       }
-      .home-image img {
+      /* Slider placed inside home-image */
+      .slider {
+        position: relative;
+        overflow: hidden;
         max-width: 100%;
-        height: auto;
+        margin: 0 auto;
+      }
+      .slider img {
+        width: 100%;
+        display: none;
+      }
+      .slider img.active {
+        display: block;
       }
       
       /* ========== Footer ========== */
@@ -146,7 +156,12 @@
             <p>Discover unique, handcrafted wooden wearables that blend traditional craftsmanship with contemporary design. You will fall in love!</p>
           </div>
           <div class="home-image">
-            <img src="Images/earwings.jpg" alt="Artisan Ear Wings">
+            <!-- Slider with sample images on the right -->
+            <div class="slider">
+              <img src="Images/earwings.jpg" alt="Artisan Ear Wings" class="active">
+              <img src="Images/fireneck.jpg" alt="Wooden Neckpiece">
+              <img src="Images/flowerear.jpg" alt="Floral Earwear">
+            </div>
           </div>
         </section>
       </main>
@@ -157,8 +172,25 @@
       <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
     </footer>
     
-    <!-- JavaScript for Header Scroll Effect -->
+    <!-- JavaScript for Slider and Header Scroll Effect -->
     <script>
+      // Simple Slider Functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slider img');
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      if (slides.length > 0) {
+        setInterval(nextSlide, 3000);
+      }
+      
+      // Header scroll effect
       window.addEventListener('scroll', function() {
         const header = document.querySelector('.business-header');
         if (window.scrollY > 100) {
