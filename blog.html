@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harriet Boone Artisan Works - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harriet Boone Artisan Works - Blog</title>
     <style>
-      /* Use Dancing Script for h1 and set a larger size */
-      h1 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 3em; /* Increase size as needed */
+      /* ========== Custom Font Setup ========== */
+      @font-face {
+        font-family: 'Rouge Script';
+        src: url('webskills/fonts/RougeScript-Regular.woff2') format('woff2'),
+             url('webskills/fonts/RougeScript-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
       }
       
-      /* Use Playfair Display for h2 and h3 with a different size */
-      h2, h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2em; /* Adjust as needed */
-      }
-      
-      /* Other styles */
+      /* ========== Global Styles ========== */
       body {
         font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
         color: #4B0082;
+        margin: 0;
+        padding: 0;
       }
+      h1 {
+        font-family: 'Rouge Script', cursive;
+        font-size: 3.5em;
+      }
+      h2, h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2em;
+      }
+      
+      /* ========== Navigation Bar ========== */
       nav {
-        background-color: #B39DDB; /* Pastel purple */
+        background-color: #B39DDB;
         padding: 10px 0;
       }
       nav ul {
@@ -45,28 +54,36 @@
       nav ul li a:hover {
         color: #FF69B4;
       }
+      
       .container {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 20px;
       }
-      .slider {
-        position: relative;
-        overflow: hidden;
-        max-width: 800px;
-        margin: 20px auto;
+      
+      /* ========== Blog Article Layout: Text Left, Image Right ========== */
+      .blog-article {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: #fff;
+        border: 1px solid #ddd;
       }
-      .slider img {
-        width: 100%;
-        display: none;
+      .blog-text {
+        flex: 1;
       }
-      .slider img.active {
-        display: block;
+      .blog-image {
+        flex: 1;
+        text-align: right;
       }
-      img {
-        max-width: 100%;
-        height: auto;
+      .blog-image img {
+        width: 250px; /* Reduced image size */
+        height: 200px;
+        object-fit: cover;
       }
+      
       footer {
         text-align: center;
         padding: 10px;
@@ -84,9 +101,9 @@
         <ul>
           <li><a href="title.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="order.html">Order</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
         </ul>
       </nav>
     </header>
@@ -94,15 +111,23 @@
       <main>
         <section id="blog">
           <h1>Artisan Insights</h1>
-          <article>
-            <h2>Crafting with Passion</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin, ipsum a tincidunt fermentum, arcu orci sollicitudin lectus, in porta urna neque ut ex. Nulla facilisi.</p>
-            <img src="Images/ringcarved.jpg" alt="Carved Ring">
+          <article class="blog-article">
+            <div class="blog-text">
+              <h2>Crafting with Passion</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin, ipsum a tincidunt fermentum, arcu orci sollicitudin lectus, in porta urna neque ut ex. Nulla facilisi.</p>
+            </div>
+            <div class="blog-image">
+              <img src="Images/ringcarved.jpg" alt="Carved Ring">
+            </div>
           </article>
-          <article>
-            <h2>The Art of Woodworking</h2>
-            <p>Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet magna vel felis cursus tincidunt non non sapien.</p>
-            <img src="Images/woodboxsml2.jpg" alt="Wooden Box">
+          <article class="blog-article">
+            <div class="blog-text">
+              <h2>The Art of Woodworking</h2>
+              <p>Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet magna vel felis cursus tincidunt non non sapien.</p>
+            </div>
+            <div class="blog-image">
+              <img src="Images/woodboxsml2.jpg" alt="Wooden Box">
+            </div>
           </article>
         </section>
       </main>
