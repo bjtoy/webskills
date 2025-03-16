@@ -3,28 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harriet Boone Artisan Works - Home</title>
+    <title>Harriet Boone Artisan Works - Products</title>
     <style>
-      /* Use Dancing Script for h1 and set a larger size */
-      h1 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 3em; /* Increase size as needed */
+      @font-face {
+        font-family: 'Rouge Script';
+        src: url('webskills/fonts/RougeScript-Regular.woff2') format('woff2'),
+             url('webskills/fonts/RougeScript-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
       }
-      
-      /* Use Playfair Display for h2 and h3 with a different size */
-      h2, h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2em; /* Adjust as needed */
-      }
-      
-      /* Other styles */
       body {
         font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
         color: #4B0082;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-family: 'Rouge Script', cursive;
+        font-size: 3.5em;
+      }
+      h2, h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2em;
       }
       nav {
-        background-color: #B39DDB; /* Pastel purple */
+        background-color: #B39DDB;
         padding: 10px 0;
       }
       nav ul {
@@ -47,31 +51,36 @@
       }
       .container {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 20px;
       }
-      .slider {
-        position: relative;
-        overflow: hidden;
-        max-width: 800px;
-        margin: 20px auto;
+      .product-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
       }
-      .slider img {
-        width: 100%;
-        display: none;
+      
+      .product {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
       }
-      .slider img.active {
-        display: block;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+      
       .product img {
-        width: 250px;
-        height: 200px;
-        object-fit: cover; 
+        width: 200px; 
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
       }
+      
+      .price {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: 10px 0;
+        color: #00008B;
+      }
+      
       footer {
         text-align: center;
         padding: 10px;
@@ -82,7 +91,6 @@
         width: 100%;
       }
     </style>
-
   </head>
   <body>
     <header>
@@ -111,7 +119,7 @@
             <div class="product">
               <img src="Images/fireneck.jpg" alt="Wooden Neckpiece">
               <h3>Wooden Neckpiece</h3>
-              <p>A beautifully crafted neckpiece that combines tradition and modern design.</p>
+              <p>A beautifully crafted neckpiece combining tradition and modern design.</p>
               <p class="price">$79.00</p>
               <button>Add to Cart</button>
             </div>
@@ -163,4 +171,20 @@
               <p>A beautifully carved ring that makes a bold statement.</p>
               <p class="price">$39.00</p>
               <button>Add to Cart</button>
-    
+            </div>
+            <div class="product">
+              <img src="Images/woodboxsml2.jpg" alt="Wooden Box">
+              <h3>Wooden Box</h3>
+              <p>A small, decorative wooden box ideal for trinkets.</p>
+              <p class="price">$29.00</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
