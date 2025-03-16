@@ -3,30 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harriet Boone Artisan Works - Home</title>
+    <title>Order - Harriet Boone Artisan Works</title>
     <style>
-      /* Use Dancing Script for h1 and set a larger size */
-      h1 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 3em; /* Increase size as needed */
-      }
-      
-      /* Use Playfair Display for h2 and h3 with a different size */
-      h2, h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2em; /* Adjust as needed */
-      }
-      
-      /* Other styles */
+      /* General Page Styling */
       body {
-        font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
         color: #4B0082;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
       }
+      
+      h1, h2, h3 {
+        color: #00008B;
+        text-shadow: 1px 1px 0 #FF69B4, -1px -1px 0 #FF69B4, 1px -1px 0 #FF69B4, -1px 1px 0 #FF69B4;
+        font-family: 'Playfair Display', serif;
+      }
+      
       nav {
-        background-color: #B39DDB; /* Pastel purple */
+        background-color: #B39DDB;
         padding: 10px 0;
       }
+      
       nav ul {
         list-style: none;
         display: flex;
@@ -34,17 +32,21 @@
         margin: 0;
         padding: 0;
       }
+      
       nav ul li {
         margin: 0 15px;
       }
+      
       nav ul li a {
         text-decoration: none;
         color: #00008B;
         font-weight: bold;
       }
+      
       nav ul li a:hover {
         color: #FF69B4;
       }
+      
       .container {
         max-width: 1200px;
         margin: 80px auto 100px;
@@ -53,59 +55,58 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(30, 2, 86, 0.1);
       }
-      .slider {
-        position: relative;
-        overflow: hidden;
-        max-width: 800px;
-        margin: 20px auto;
+      
+      /* Improved Form Layout */
+      form {
+        margin: 20px 0;
       }
-      .slider img {
-        width: 100%;
-        display: none;
+      
+      .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
       }
-      .slider img.active {
-        display: block;
+      
+      .form-row label {
+        width: 150px;
+        text-align: right;
+        margin-right: 10px;
+        font-weight: bold;
       }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #B39DDB;
-        color: #00008B;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-      input, select, textarea {
+      
+      .form-row input,
+      .form-row select,
+      .form-row textarea {
+        flex: 1;
         padding: 8px;
-        margin-top: 5px;
-        margin-bottom: 10px;
-        width: 100%;
-        max-width: 400px;
         transition: box-shadow 0.3s ease;
       }
-
-      input:focus, select:focus, textarea:focus {
-        box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); /* Subtle pink glow */
+      
+      .form-row input:focus,
+      .form-row select:focus,
+      .form-row textarea:focus {
+        box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
       }
-
+      
+      .form-buttons {
+        display: flex;
+        gap: 15px;
+      }
+      
       button {
         padding: 10px 20px;
         background-color: #00008B;
         color: #FF69B4;
         border: none;
         cursor: pointer;
-        margin-right: 10px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-
+      
       button:hover {
         transform: scale(1.05);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
+      
       .order-summary {
         border: 1px solid #ddd;
         padding: 15px;
@@ -116,12 +117,30 @@
         animation: fadeIn 1s forwards;
         animation-delay: 0.5s;
       }
-
+      
       @keyframes fadeIn {
         to {
           opacity: 1;
         }
-      } 
+      }
+      
+      /* Order Page Image */
+      .order-img {
+        display: block;
+        margin: 20px auto;
+        max-width: 500px;
+        width: 100%;
+      }
+      
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #B39DDB;
+        color: #00008B;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -144,33 +163,42 @@
           <img class="order-img" src="Images/jewelrymaking.jpg" alt="Woodworking Jewelry Process">
           <p>Please fill out the form below to place your order or request custom designs.</p>
           <form id="order-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="address">Shipping Address:</label>
-            <textarea id="address" name="address" rows="3" required></textarea>
-            
-            <label for="product">Product:</label>
-            <select id="product" name="product">
-              <option value="earrings">Wooden Earrings</option>
-              <option value="brooch">Wooden Brooch</option>
-              <option value="bracelet">Wooden Bracelet</option>
-            </select>
-            
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1">
-            
-            <label for="comments">Additional Instructions:</label>
-            <textarea id="comments" name="comments" rows="3"></textarea>
-            
-            <button type="submit">Submit Order</button>
-            <button type="reset">Reset Form</button>
+            <div class="form-row">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-row">
+              <label for="address">Shipping Address:</label>
+              <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-row">
+              <label for="product">Product:</label>
+              <select id="product" name="product">
+                <option value="earrings">Wooden Earrings</option>
+                <option value="brooch">Wooden Brooch</option>
+                <option value="bracelet">Wooden Bracelet</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" name="quantity" value="1" min="1">
+            </div>
+            <div class="form-row">
+              <label for="comments">Additional Instructions:</label>
+              <textarea id="comments" name="comments" rows="3"></textarea>
+            </div>
+            <div class="form-row form-buttons">
+              <button type="submit">Submit Order</button>
+              <button type="reset">Reset Form</button>
+            </div>
           </form>
           <div class="order-summary">
             <h2>Order Summary</h2>
@@ -206,9 +234,10 @@
           <strong>Comments:</strong> ${comments}
         `;
       });
-        orderForm.addEventListener('submit', function() {
-          summaryText.style.backgroundColor = '#e8eaf6';
-          setTimeout(() => {
+      
+      orderForm.addEventListener('submit', function() {
+        summaryText.style.backgroundColor = '#e8eaf6';
+        setTimeout(() => {
           summaryText.style.backgroundColor = 'transparent';
         }, 1000);
       });
