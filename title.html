@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harriet Boone Artisan Works - Home</title>
+    <title>Harriet Boone Artisan Works - About</title>
     <style>
       @font-face {
         font-family: 'Rouge Script';
@@ -12,39 +12,30 @@
         font-weight: normal;
         font-style: normal;
       }
-      @font-face {
-        font-family: 'Garamond';
-        src: url('webskills/fonts/Garamond_[allfont.ru].woff2') format('woff2'),
-             url('webskills/fonts/Garamond-[allfont.ru].woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-      }
       body {
-        font-family: 'Open Sans', sans-serif; /* Use original body font */
+        font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
-        color: #4B0082; /* Dark purple for page text */
+        color: #4B0082;
         margin: 0;
         padding: 0;
       }
-      .business-header h1 {
-        font-family: 'Rouge Script', cursive;
-        font-size: 2em;  /* Smaller for header */
-        margin: 0;
-      }
-      h1.main-heading {
+      h1 {
         font-family: 'Rouge Script', cursive;
         font-size: 3.5em;
       }
       h2, h3 {
         font-family: 'Open Sans', sans-serif;
         font-size: 2em;
-      }
+      }      
       .business-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        background-color: #B39DDB; /* Pastel purple */
+        background-color: #B39DDB;
+      }
+      .header-left h1 {
+        margin: 0;
       }
       .header-right {
         text-align: right;
@@ -65,12 +56,11 @@
       }
       .main-nav ul li a {
         text-decoration: none;
-        color: #00008B; /* Darkish blue */
+        color: #00008B;
         font-weight: bold;
       }
       .main-nav ul li a:hover {
-        color: #FF69B4; /* Hot pink on hover */
-      }
+        color: #FF69B4;
       .container {
         max-width: 1200px;
         margin: 20px auto;
