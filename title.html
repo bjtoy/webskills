@@ -5,49 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harriet Boone Artisan Works - Home</title>
     <style>
-      /* Use Dancing Script for h1 and set a larger size */
-      h1 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 3em; /* Increase size as needed */
+      /* ========== Custom Font Setup ========== */
+      @font-face {
+        font-family: 'Dancing Script';
+        src: url('webskills/fonts/DancingScript-Regular.woff2') format('woff2'),
+             url('webskills/fonts/DancingScript-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
       }
-      
-      /* Use Playfair Display for h2 and h3 with a different size */
-      h2, h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2em; /* Adjust as needed */
+      @font-face {
+        font-family: 'Playfair Display';
+        src: url('webskills/fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+             url('webskills/fonts/PlayfairDisplay-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
       }
-      
-      /* Other styles */
+
+      /* ========== Global Styles ========== */
       body {
         font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
-        color: #4B0082;
+        color: #4B0082; /* Dark purple for page text */
+        margin: 0;
+        padding: 0;
       }
-      nav {
+      h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 3em;
+      }
+      h2, h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em;
+      }
+
+      /* ========== Header with Business Info ========== */
+      .business-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
         background-color: #B39DDB; /* Pastel purple */
-        padding: 10px 0;
       }
-      nav ul {
+      .header-left h1 {
+        margin: 0;
+      }
+      .header-right {
+        text-align: right;
+        font-size: 0.9em;
+      }
+
+      /* ========== Navigation Bar ========== */
+      .main-nav {
+        background-color: #B39DDB;
+      }
+      .main-nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
         margin: 0;
-        padding: 0;
+        padding: 10px 0;
       }
-      nav ul li {
+      .main-nav ul li {
         margin: 0 15px;
       }
-      nav ul li a {
+      .main-nav ul li a {
         text-decoration: none;
-        color: #00008B;
+        color: #00008B; /* Darkish blue */
         font-weight: bold;
       }
-      nav ul li a:hover {
-        color: #FF69B4;
+      .main-nav ul li a:hover {
+        color: #FF69B4; /* Hot pink on hover */
       }
+
+      /* ========== Container and Slider ========== */
       .container {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 20px;
       }
       .slider {
@@ -63,10 +96,8 @@
       .slider img.active {
         display: block;
       }
-      img {
-        max-width: 80%;
-        height: auto;
-      }
+
+      /* ========== Footer ========== */
       footer {
         text-align: center;
         padding: 10px;
@@ -76,21 +107,17 @@
         bottom: 0;
         width: 100%;
       }
+
+      /* ========== Header Scroll Effect ========== */
+      header.scrolled {
+        background-color: rgba(179, 157, 219, 0.9); /* Slightly transparent pastel purple */
+        transition: background-color 0.3s ease;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="title.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-    <header>
+    <!-- Business header with contact info -->
+    <header class="business-header">
       <div class="header-left">
         <h1>Harriet Boone Artisan Works</h1>
       </div>
@@ -99,12 +126,23 @@
         <p>(08) 1234 5678</p>
       </div>
     </header>
+
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="title.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Container -->
     <div class="container">
       <main>
         <section id="home">
-          <h1>Harriet Boone Artisan Works</h1>
-          <h2>200 Main Rd, Noarlunga, SA 5172</h2>
-          <h3>Ph: 0400 123 456 - 9am - 5pm - 7 Days </h3>
+          <h1>Welcome to Harriet Boone Artisan Works</h1>
           <p>Discover unique, handcrafted wooden wearables that blend traditional craftsmanship with contemporary design. You will fall in love!</p>
           <!-- Slider with sample images -->
           <div class="slider">
@@ -115,9 +153,13 @@
         </section>
       </main>
     </div>
+
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for slider and header scroll effect -->
     <script>
       // Simple Slider Functionality
       let currentSlide = 0;
@@ -134,6 +176,16 @@
       if (slides.length > 0) {
         setInterval(nextSlide, 3000);
       }
+
+      // Header scroll effect
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.business-header');
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
     </script>
   </body>
 </html>
