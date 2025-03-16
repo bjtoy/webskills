@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harriet Boone Artisan Works - About</title>
+    <title>Harriet Boone Artisan Works - Home</title>
     <style>
+      /* ========== Custom Font Setup ========== */
       @font-face {
         font-family: 'Rouge Script';
         src: url('webskills/fonts/RougeScript-Regular.woff2') format('woff2'),
@@ -12,8 +13,16 @@
         font-weight: normal;
         font-style: normal;
       }
+      @font-face {
+        font-family: 'Harrington';
+        src: url('webskills/fonts/HARNGTON.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      /* ========== Global Styles ========== */
       body {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Harrington', serif;
         background-color: #F3F4F6;
         color: #4B0082;
         margin: 0;
@@ -24,9 +33,11 @@
         font-size: 3.5em;
       }
       h2, h3 {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Harrington', serif;
         font-size: 2em;
-      }      
+      }
+      
+      /* ========== Header with Business Info ========== */
       .business-header {
         display: flex;
         justify-content: space-between;
@@ -36,11 +47,15 @@
       }
       .header-left h1 {
         margin: 0;
+        font-size: 2em;
+        font-family: 'Rouge Script', cursive;
       }
       .header-right {
         text-align: right;
         font-size: 0.9em;
       }
+      
+      /* ========== Navigation Bar ========== */
       .main-nav {
         background-color: #B39DDB;
       }
@@ -61,6 +76,9 @@
       }
       .main-nav ul li a:hover {
         color: #FF69B4;
+      }
+      
+      /* ========== Main Content: Two-Column Layout ========== */
       .container {
         max-width: 1200px;
         margin: 20px auto;
@@ -92,6 +110,8 @@
       .slider img.active {
         display: block;
       }
+      
+      /* ========== Footer ========== */
       footer {
         text-align: center;
         padding: 10px;
@@ -101,6 +121,8 @@
         bottom: 0;
         width: 100%;
       }
+      
+      /* ========== Header Scroll Effect ========== */
       header.scrolled {
         background-color: rgba(179, 157, 219, 0.9);
         transition: background-color 0.3s ease;
@@ -108,6 +130,7 @@
     </style>
   </head>
   <body>
+    <!-- Business Header -->
     <header class="business-header">
       <div class="header-left">
         <h1>Harriet Boone Artisan Works</h1>
@@ -117,7 +140,9 @@
         <p>(08) 1234 5678</p>
       </div>
     </header>
-        <nav class="main-nav">
+    
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
       <ul>
         <li><a href="title.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -126,11 +151,13 @@
         <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
+    
+    <!-- Main Content -->
     <div class="container">
       <main>
         <section id="home" class="home-content">
           <div class="home-text">
-            <h1 class="main-heading">Welcome to Harriet Boone Artisan Works</h1>
+            <h1>Welcome to Harriet Boone Artisan Works</h1>
             <p>Discover unique, handcrafted wooden wearables that blend traditional craftsmanship with contemporary design. You will fall in love!</p>
           </div>
           <div class="home-image">
@@ -143,10 +170,14 @@
         </section>
       </main>
     </div>
+    
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
     </footer>
-      <script>
+    
+    <!-- JavaScript for Slider and Header Scroll Effect -->
+    <script>
       let currentSlide = 0;
       const slides = document.querySelectorAll('.slider img');
       function showSlide(index) {
