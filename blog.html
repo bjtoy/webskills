@@ -9,11 +9,13 @@
         font-family: 'Rouge Script';
         src: url('webskills/fonts/RougeScript-Regular.woff2') format('woff2'),
              url('webskills/fonts/RougeScript-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Harrington';
+        src: url('webskills/fonts/HARNGTON.woff') format('woff');
       }
       body {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Harrington', serif;
         background-color: #F3F4F6;
         color: #4B0082;
         margin: 0;
@@ -24,29 +26,44 @@
         font-size: 3.5em;
       }
       h2, h3 {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Harrington', serif;
         font-size: 2em;
       }
-      nav {
+      .business-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
         background-color: #B39DDB;
-        padding: 10px 0;
       }
-      nav ul {
+      .header-left h1 {
+        margin: 0;
+        font-size: 2em;
+        font-family: 'Rouge Script', cursive;
+      }
+      .header-right {
+        text-align: right;
+        font-size: 0.9em;
+      }
+      .main-nav {
+        background-color: #B39DDB;
+      }
+      .main-nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
         margin: 0;
-        padding: 0;
+        padding: 10px 0;
       }
-      nav ul li {
+      .main-nav ul li {
         margin: 0 15px;
       }
-      nav ul li a {
+      .main-nav ul li a {
         text-decoration: none;
         color: #00008B;
         font-weight: bold;
       }
-      nav ul li a:hover {
+      .main-nav ul li a:hover {
         color: #FF69B4;
       }
       .container {
@@ -71,8 +88,8 @@
         text-align: right;
       }
       .blog-image img {
-        width: 250px; /* Reduced image size */
-        height: 200px;
+        width: 200px;
+        height: 150px;
         object-fit: cover;
       }
       footer {
@@ -84,20 +101,31 @@
         bottom: 0;
         width: 100%;
       }
+      header.scrolled {
+        background-color: rgba(179, 157, 219, 0.9);
+        transition: background-color 0.3s ease;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="title.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-        </ul>
-      </nav>
+    <header class="business-header">
+      <div class="header-left">
+        <h1>Harriet Boone Artisan Works</h1>
+      </div>
+      <div class="header-right">
+        <p>123 Artisan Lane, Adelaide, SA 5000</p>
+        <p>(08) 1234 5678</p>
+      </div>
     </header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="title.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+    </nav>
     <div class="container">
       <main>
         <section id="blog">
