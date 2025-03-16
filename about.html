@@ -3,69 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harriet Boone Artisan Works - Home</title>
+    <title>Harriet Boone Artisan Works - About</title>
     <style>
-      /* Use Dancing Script for h1 and set a larger size */
-      h1 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 3em; /* Increase size as needed */
+      @font-face {
+        font-family: 'Rouge Script';
+        src: url('webskills/fonts/RougeScript-Regular.woff2') format('woff2'),
+             url('webskills/fonts/RougeScript-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
       }
-      
-      /* Use Playfair Display for h2 and h3 with a different size */
-      h2, h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2em; /* Adjust as needed */
-      }
-      
-      /* Other styles */
       body {
         font-family: 'Open Sans', sans-serif;
         background-color: #F3F4F6;
         color: #4B0082;
+        margin: 0;
+        padding: 0;
       }
-      nav {
-        background-color: #B39DDB; /* Pastel purple */
-        padding: 10px 0;
+      h1 {
+        font-family: 'Rouge Script', cursive;
+        font-size: 3.5em;
       }
-      nav ul {
+      h2, h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2em;
+      }      
+      .business-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #B39DDB;
+      }
+      .header-left h1 {
+        margin: 0;
+      }
+      .header-right {
+        text-align: right;
+        font-size: 0.9em;
+      }
+      .main-nav {
+        background-color: #B39DDB;
+      }
+      .main-nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
         margin: 0;
-        padding: 0;
+        padding: 10px 0;
       }
-      nav ul li {
+      .main-nav ul li {
         margin: 0 15px;
       }
-      nav ul li a {
+      .main-nav ul li a {
         text-decoration: none;
         color: #00008B;
         font-weight: bold;
       }
-      nav ul li a:hover {
+      .main-nav ul li a:hover {
         color: #FF69B4;
       }
       .container {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 20px;
       }
-      .slider {
-        position: relative;
-        overflow: hidden;
-        max-width: 800px;
-        margin: 20px auto;
+      
+      .about-content {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
       }
-      .slider img {
+      .about-images {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .about-images img {
         width: 100%;
-        display: none;
+        max-width: 400px;
+        height: 250px;
+        object-fit: cover;
       }
-      .slider img.active {
-        display: block;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
+      .about-text {
+        flex: 1;
       }
       footer {
         text-align: center;
@@ -76,35 +97,58 @@
         bottom: 0;
         width: 100%;
       }
+      header.scrolled {
+        background-color: rgba(179, 157, 219, 0.9);
+        transition: background-color 0.3s ease;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="title.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </nav>
+    <header class="business-header">
+      <div class="header-left">
+        <h1>Harriet Boone Artisan Works</h1>
+      </div>
+      <div class="header-right">
+        <p>123 Artisan Lane, Adelaide, SA 5000</p>
+        <p>(08) 1234 5678</p>
+      </div>
     </header>
-    <div class="container">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="title.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+        <div class="container">
       <main>
-        <section id="about">
-          <h1>About Harriet Boone</h1>
-          <p>Harriet Boone is an artisan based in Adelaide, renowned for her handcrafted wooden wearables. Transitioning from a passionate hobbyist to a professional, she combines traditional techniques with modern design sensibilities.</p>
-          <p>Her creations are inspired by the natural beauty of Australia and the art of woodworking. Every piece reflects her commitment to quality and sustainable practices.</p>
-          <!-- First image related to Harriet's work -->
-          <img src="images/woodboxsml.jpg" alt="One of a kind wooden trinket box">
-          <!-- Additional image showcasing Harriet using wood to make jewelry -->
-          <img src="Images/Jewelrymake.jpg" alt="Crafting wooden jewelry">
+        <section id="about" class="about-content">
+          <div class="about-images">
+            <img src="Images/woodboxsml.jpg" alt="Wooden Trinket Box">
+            <img src="Images/Jewelrymake.jpg" alt="Crafting Wooden Jewelry">
+          </div>
+          <div class="about-text">
+            <h1>About Harriet Boone</h1>
+            <p>Harriet Boone is an artisan based in Adelaide, renowned for her handcrafted wooden wearables. Transitioning from a passionate hobbyist to a professional, she combines traditional techniques with modern design sensibilities.</p>
+            <p>Her creations are inspired by the natural beauty of Australia and the art of woodworking. Every piece reflects her commitment to quality, sustainability, and artistic expression.</p>
+          </div>
         </section>
       </main>
     </div>
-    <footer>
+        <footer>
       <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
     </footer>
+        <script>
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.business-header');
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    </script>
   </body>
 </html>
