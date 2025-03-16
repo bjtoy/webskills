@@ -47,8 +47,11 @@
       }
       .container {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 80px auto 100px;
         padding: 20px;
+        background: linear-gradient(135deg, #f3f4f6, #e8eaf6);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(30, 2, 86, 0.1);
       }
       .slider {
         position: relative;
@@ -76,6 +79,34 @@
         bottom: 0;
         width: 100%;
       }
+      input, select, textarea {
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 400px;
+        transition: box-shadow 0.3s ease;
+      }
+
+      input:focus, select:focus, textarea:focus {
+        box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); /* Subtle pink glow */
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #00008B;
+        color: #FF69B4;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
     </style>
   </head>
   <body>
