@@ -13,17 +13,10 @@
         font-weight: normal;
         font-style: normal;
       }
-      @font-face {
-        font-family: 'Garamond';
-        src: url('webskills/fonts/Garamond_[allfont.ru].woff2') format('woff2'),
-             url('webskills/fonts/Garamond-[allfont.ru].woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-      }
-
+      
       /* ========== Global Styles ========== */
       body {
-        font-family: 'Garamond', serif; /* Use Garamond for all general text */
+        font-family: 'Open Sans', sans-serif; /* Revert to original font for body text */
         background-color: #F3F4F6;
         color: #4B0082; /* Dark purple for page text */
         margin: 0;
@@ -31,13 +24,13 @@
       }
       h1 {
         font-family: 'Rouge Script', cursive; /* Use Rouge Script for h1 headings */
-        font-size: 3em;
+        font-size: 3.5em;  /* Slightly larger heading */
       }
       h2, h3 {
-        font-family: 'Garamond', serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 2em;
       }
-
+      
       /* ========== Header with Business Info ========== */
       .business-header {
         display: flex;
@@ -53,7 +46,7 @@
         text-align: right;
         font-size: 0.9em;
       }
-
+      
       /* ========== Navigation Bar ========== */
       .main-nav {
         background-color: #B39DDB;
@@ -76,27 +69,33 @@
       .main-nav ul li a:hover {
         color: #FF69B4; /* Hot pink on hover */
       }
-
-      /* ========== Container and Slider ========== */
+      
+      /* ========== Main Content Container ========== */
       .container {
         max-width: 1200px;
         margin: 20px auto;
         padding: 20px;
       }
-      .slider {
-        position: relative;
-        overflow: hidden;
-        max-width: 800px;
-        margin: 20px auto;
+      
+      /* ========== Home Section: Two-Column Layout ========== */
+      .home-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
       }
-      .slider img {
-        width: 100%;
-        display: none;
+      .home-text {
+        flex: 1;
       }
-      .slider img.active {
-        display: block;
+      .home-image {
+        flex: 1;
+        text-align: right;
       }
-
+      .home-image img {
+        max-width: 100%;
+        height: auto;
+      }
+      
       /* ========== Footer ========== */
       footer {
         text-align: center;
@@ -107,7 +106,7 @@
         bottom: 0;
         width: 100%;
       }
-
+      
       /* ========== Header Scroll Effect ========== */
       header.scrolled {
         background-color: rgba(179, 157, 219, 0.9); /* Slightly transparent pastel purple */
@@ -116,7 +115,7 @@
     </style>
   </head>
   <body>
-    <!-- Business header with contact info -->
+    <!-- Business Header with Contact Info -->
     <header class="business-header">
       <div class="header-left">
         <h1>Harriet Boone Artisan Works</h1>
@@ -126,7 +125,7 @@
         <p>(08) 1234 5678</p>
       </div>
     </header>
-
+    
     <!-- Navigation Bar -->
     <nav class="main-nav">
       <ul>
@@ -137,47 +136,29 @@
         <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
-
-    <!-- Main Content Container -->
+    
+    <!-- Main Content: Two-Column Layout -->
     <div class="container">
       <main>
-        <section id="home">
-          <h1>Welcome to Harriet Boone Artisan Works</h1>
-          <p>Discover unique, handcrafted wooden wearables that blend traditional craftsmanship with contemporary design. You will fall in love!</p>
-          <!-- Slider with sample images -->
-          <div class="slider">
-            <img src="Images/earwings.jpg" alt="Artisan Ear Wings" class="active">
-            <img src="Images/fireneck.jpg" alt="Wooden Neckpiece">
-            <img src="Images/flowerear.jpg" alt="Floral Earwear">
+        <section id="home" class="home-content">
+          <div class="home-text">
+            <h1>Welcome to Harriet Boone Artisan Works</h1>
+            <p>Discover unique, handcrafted wooden wearables that blend traditional craftsmanship with contemporary design. You will fall in love!</p>
+          </div>
+          <div class="home-image">
+            <img src="Images/earwings.jpg" alt="Artisan Ear Wings">
           </div>
         </section>
       </main>
     </div>
-
+    
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 Harriet Boone Artisan Works. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript for slider and header scroll effect -->
+    
+    <!-- JavaScript for Header Scroll Effect -->
     <script>
-      // Simple Slider Functionality
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.slider img');
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle('active', i === index);
-        });
-      }
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-      if (slides.length > 0) {
-        setInterval(nextSlide, 3000);
-      }
-
-      // Header scroll effect
       window.addEventListener('scroll', function() {
         const header = document.querySelector('.business-header');
         if (window.scrollY > 100) {
