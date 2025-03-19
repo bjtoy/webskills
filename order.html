@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harriet Boone Artisan Works - Home</title>
+    <title>Harriet Boone Artisan Works - Order</title>
     <style>
       @font-face {
         font-family: 'Rouge Script';
@@ -30,11 +30,7 @@
         font-family: 'Rouge Script', cursive;
         font-size: 70px;
       }
-      h2 {
-        font-family: 'Rouge Script', cursive;
-        font-size: 50px; 
-      }
-      h3 {
+      h2, h3 {
         font-family: 'Harrington', serif;
         font-size: 40px;
       }
@@ -77,11 +73,13 @@
       .main-nav ul li a:hover {
         color: #FF69B4;
       }
+      
       .container {
         max-width: 1200px;
         margin: 20px auto;
         padding: 20px;
       }
+      
       .order-content {
         display: flex;
         gap: 20px;
@@ -102,6 +100,7 @@
         height: 200px;
         object-fit: cover;
       }
+      
       form {
         margin: 20px 0;
       }
@@ -157,6 +156,7 @@
       @keyframes fadeIn {
         to { opacity: 1; }
       }
+      
       footer {
         text-align: center;
         padding: 10px;
@@ -166,6 +166,7 @@
         bottom: 0;
         width: 100%;
       }
+      
       header.scrolled {
         background-color: rgba(179, 157, 219, 0.9);
         transition: background-color 0.3s ease;
@@ -217,9 +218,16 @@
               <div class="form-row">
                 <label for="product">Product:</label>
                 <select id="product" name="product">
-                  <option value="earrings">Wooden Earrings</option>
-                  <option value="brooch">Wooden Brooch</option>
-                  <option value="bracelet">Wooden Bracelet</option>
+                  <option value="Wooden Earrings">Wooden Earrings - $49.00</option>
+                  <option value="Wooden Neckpiece">Wooden Neckpiece - $79.00</option>
+                  <option value="Floral Earwear">Floral Earwear - $59.00</option>
+                  <option value="Jarrah Wedding Pair">Jarrah Wedding Pair - $99.00</option>
+                  <option value="Wooden Jewelry Box">Wooden Jewelry Box - $89.00</option>
+                  <option value="Moon Box">Moon Box - $69.00</option>
+                  <option value="Neck Shapes">Neck Shapes - $59.00</option>
+                  <option value="Tree of Life Necklace">Tree of Life Necklace - $79.00</option>
+                  <option value="Carved Ring">Carved Ring - $39.00</option>
+                  <option value="Wooden Box">Wooden Box - $29.00</option>
                 </select>
               </div>
               <div class="form-row">
